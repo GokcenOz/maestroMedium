@@ -1,0 +1,15 @@
+# flows/login_and_swipe.yaml
+
+appId: com.wdiodemoapp
+---
+- runFlow:
+    file: ../flows/login.yaml
+    env:
+      username: "test@qa.com"
+      password: "123abc123"
+
+- tapOn: "OK"
+- tapOn: "Swipe"
+
+- swipe:
+    direction: left
