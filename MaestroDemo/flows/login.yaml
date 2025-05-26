@@ -1,0 +1,18 @@
+# flows/login.yaml
+
+appId: com.wdiodemoapp
+---
+- launchApp:
+    clearState: true
+
+- assertVisible: "WEBDRIVER"
+- tapOn: "Login"
+- assertVisible: "Login / Sign up Form"
+- tapOn: "input-email"
+- inputText: "${username}"
+- tapOn: "Password"
+- inputText: "${password}"
+- tapOn:
+    text: "LOGIN"
+    index: 1
+- assertVisible: "Success"
