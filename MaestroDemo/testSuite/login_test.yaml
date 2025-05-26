@@ -1,0 +1,10 @@
+# tests/login_test.yaml
+
+appId: com.wdiodemoapp
+---
+- runFlow:
+    file: ../flows/login.yaml
+    env:
+      username: "test@qa.com"
+      password: "123abc123"
+
